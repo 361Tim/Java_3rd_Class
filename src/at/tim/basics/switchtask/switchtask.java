@@ -1,8 +1,8 @@
-package at.tim.basics.switchaufgabe;
+package at.tim.basics.switchtask;
 
 import java.util.Random;
 
-public class control {
+public class switchtask {
 
     public static void main(String[] args) {
 

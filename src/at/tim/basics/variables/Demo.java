@@ -1,4 +1,4 @@
-package at.tim.basics.variablen;
+package at.tim.basics.variables;
 
 public class Demo {
     public static void main(String[] args) {

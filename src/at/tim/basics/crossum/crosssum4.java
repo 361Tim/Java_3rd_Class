@@ -3,7 +3,7 @@ package at.tim.basics.crossum;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class quersumme4 {
+public class crosssum4 {
 
     public static void main(String[] args) {
 

@@ -1,8 +1,8 @@
-package at.tim.basics.bankomat;
+package at.tim.basics.cashmachine;
 
 import java.util.Scanner;
 
-public class swih {
+public class cashmachine {
     public static void main(String[] args) {
         System.out.println("1. Einzahlen");
         System.out.println("2. Abheben");

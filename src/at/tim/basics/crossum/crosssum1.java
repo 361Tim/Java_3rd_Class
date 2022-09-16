@@ -1,6 +1,6 @@
 package at.tim.basics.crossum;
 
-public class quersumme1 {
+public class crosssum1 {
     public static void main(String[] args) {
         for (int zahl = 1000; zahl < 2000; zahl++) {
             int zahl2 = zahl;

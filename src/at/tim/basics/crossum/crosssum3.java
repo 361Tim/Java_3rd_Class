@@ -1,16 +1,17 @@
 package at.tim.basics.crossum;
 
-public class quersumme3 {
+public class crosssum3 {
     public static void main(String[] args) {
         int[] crossSumCounter = new int[28];
 
-        for (int cnt = 0; cnt < 1000; cnt++) {
-            String numberAsString = Integer.toString(cnt);
-            char[] numbers = numberAsString.toCharArray();
+        for (int zahl = 0; zahl < 1000; zahl++) {
+
 
             int sum = 0;
-            for (int i = 0; i < numbers.length; i++) {
-                sum += Character.getNumericValue(numbers[i]);
+            int zahl2 = zahl;
+            while (zahl2>0){
+                sum += zahl2%10;
+                zahl2/=10;
 
             }
             crossSumCounter[sum] += 1;
