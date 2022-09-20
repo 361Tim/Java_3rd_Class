@@ -121,7 +121,7 @@ public class tictactoe {
                 printBoard();
                 winner = checkWinner();
             } else {
-                System.out.println("Falsch Engabe anderes Feld");
+                System.out.println("Falsch Eingabe, anderes Feld");
             }
         }
 
