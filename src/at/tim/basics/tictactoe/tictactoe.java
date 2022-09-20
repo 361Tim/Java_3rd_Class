@@ -99,11 +99,11 @@ public class tictactoe {
             try {
                 numInput = in.nextInt();
                 if (!(numInput > 0 && numInput <= 9)) {
-                    System.out.println("Falsch Eingabe anderes Feld");
+                    System.out.println("Falsch Eingabe, anderes Feld");
                     continue;
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Falsch Eingabe anderes Feld");
+                System.out.println("Falsch Eingabe, anderes Feld");
                 continue;
             }
 
