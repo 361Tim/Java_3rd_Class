@@ -2,25 +2,14 @@ package at.tim.basics.erstesobjekt;
 
 public class Main {
     public static void main(String[] args) {
-        Car c1 = new Car();
-        c1.brand= "Audi";
-        c1.fuelconsumption = 7;
-        c1.serialnumber = "A1234";
-        c1.fuelamount = 30;
-        c1.honkamounts=2;
+        RearMirror r1 = new RearMirror(100,0);
+        RearMirror r2 = new RearMirror(90,-10);
+        Engine e1 = new Engine(140, Engine.TYPE.Diesel);
+        Car c1  = new Car("Audi", 10, "A1234",4, e1, 60);
+        c1.addMirror(r1);
+        c1.addMirror(r2);
 
-        System.out.println(c1.serialnumber);
-        System.out.println(c1.fuelamount);
-        c1.drive();
-        System.out.println(c1.fuelamount);
-        c1.boost();
-        c1.honk();
-        c1.drive();
-        System.out.println(c1.fuelamount);
-        float range = c1.getRemainingRange();
-        System.out.println("range:" + range +"km");
-
-
+        System.out.println(c1.getMirrors().get(0).getPosition());
     }
 
 }
