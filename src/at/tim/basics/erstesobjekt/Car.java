@@ -36,6 +36,7 @@ public class Car {
     }
 
     public void drive() {
+        System.out.println("I am driving");
         this.fuelamount -= this.speed*this.fuelconsumption*0.04;
         if (fuelamount<=0){
             System.out.println("Kein Benzin mehr");
@@ -138,7 +139,7 @@ public class Car {
     }
 
     public void setSpeed(int speed) {
-        if (fuelamount>100){
+        if (this.speed > 100){
             this.speed=100;
         }
         if(speed <= 1){
