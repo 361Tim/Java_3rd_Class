@@ -5,10 +5,6 @@ public class Basiccalculator {
     private double nmb2;
     private double result;
 
-    public Basiccalculator(double nmb1, double nmb2) {
-        this.nmb1 = nmb1;
-        this.nmb2 = nmb2;
-    }
 
     public void add() {
         this.result = this.nmb1 + this.nmb2;
@@ -44,13 +40,5 @@ public class Basiccalculator {
 
     public void setNmb2(int nmb2) {
         this.nmb2 = nmb2;
-    }
-
-    public double getResult() {
-        return result;
-    }
-
-    public void setResult(int result) {
-        this.result = result;
     }
 }
