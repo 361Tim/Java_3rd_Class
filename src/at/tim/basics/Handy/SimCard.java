@@ -8,4 +8,20 @@ public class SimCard {
         this.telefonnumber = telefonnumber;
         this.id = id;
     }
+
+    public String getTelefonnumber() {
+        return telefonnumber;
+    }
+
+    public void setTelefonnumber(String telefonnumber) {
+        this.telefonnumber = telefonnumber;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

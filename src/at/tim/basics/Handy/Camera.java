@@ -1,12 +1,15 @@
 package at.tim.basics.Handy;
 
-public class  Camera {
+public class Camera {
     private String type;
     private String name;
-    private int size;
 
+    public Camera(String type, String name) {
+        this.type = type;
+        this.name = name;
+    }
 
-    public PhoneFile photo(){
+    public PhoneFile photo() {
         return new PhoneFile();
     }
 }
