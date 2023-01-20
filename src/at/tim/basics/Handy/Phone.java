@@ -1,42 +1,51 @@
 package at.tim.basics.Handy;
 
 public class Phone {
-    private Camera cam;
     private SimCard simCard;
     private MemoryCard memoryCard;
+    private Camera camera;
+    private String color;
 
-    public Phone(Camera cam, SimCard simCard, MemoryCard memoryCard) {
-        this.cam = cam;
+    public Phone(SimCard simCard, MemoryCard memoryCard, Camera camera) {
         this.simCard = simCard;
         this.memoryCard = memoryCard;
+        this.camera = camera;
     }
 
-    public void takePicture(){
-        PhoneFile file = this.cam.photo();
-        this.memoryCard.save(PhoneFile);
+    public void takePicture(double currentResolution) {
+        PhoneFile currentPicture = this.camera.makePicture(currentResolution);
+        this.memoryCard.saveFile(currentPicture);
     }
 
-    public Camera getCam() {
-        return cam;
+    public void makeCall(String phoneNumber) {
+        this.simCard.doCall(phoneNumber);
     }
 
-    public void setCam(Camera cam) {
-        this.cam = cam;
+    public double getFreeSpace() {
+        return this.memoryCard.getFreeSpace();
+    }
+
+    public void printAllFiles() {
+        this.memoryCard.getAllFiles();
     }
 
     public SimCard getSimCard() {
         return simCard;
     }
 
-    public void setSimCard(SimCard simCard) {
-        this.simCard = simCard;
-    }
-
-    public MemoryCard getMemoryCard() {
+    public MemoryCard getMemomrycard() {
         return memoryCard;
     }
 
-    public void setMemoryCard(MemoryCard memoryCard) {
-        this.memoryCard = memoryCard;
+    public Camera getCamera() {
+        return camera;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

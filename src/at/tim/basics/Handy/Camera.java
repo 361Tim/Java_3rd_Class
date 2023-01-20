@@ -1,15 +1,31 @@
 package at.tim.basics.Handy;
 
-public class Camera {
-    private String type;
-    private String name;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
-    public Camera(String type, String name) {
-        this.type = type;
-        this.name = name;
+public class Camera {
+
+
+    private double resolution;
+
+    public Camera(double resolution) {
+        this.resolution = resolution;
     }
 
-    public PhoneFile photo() {
-        return new PhoneFile();
+    public PhoneFile makePicture(double currentResolution) {
+        if (currentResolution > this.resolution) {
+            currentResolution = this.resolution;
+        }
+        LocalDateTime currentDate = LocalDateTime.now();
+        String dateOfPicture = currentDate.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss", Locale.GERMAN));
+        double size = (currentResolution * 16 / 9 * currentResolution) / 1_000_000;
+        PhoneFile currentPicture = new PhoneFile("jpg", size, dateOfPicture + "_picture");
+        return currentPicture;
+    }
+
+    public double getResolution() {
+        return resolution;
     }
 }

@@ -1,27 +1,23 @@
 package at.tim.basics.Handy;
 
 public class SimCard {
-    private String telefonnumber;
     private int id;
+    private String phoneNumber;
 
-    public SimCard(String telefonnumber, int id) {
-        this.telefonnumber = telefonnumber;
+    public SimCard(int id, String phoneNumber) {
         this.id = id;
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getTelefonnumber() {
-        return telefonnumber;
-    }
-
-    public void setTelefonnumber(String telefonnumber) {
-        this.telefonnumber = telefonnumber;
+    public void doCall(String phoneNumber) {
+        System.out.println("The number " + phoneNumber + " is getting called...");
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 }

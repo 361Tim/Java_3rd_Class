@@ -5,29 +5,42 @@ import java.util.List;
 
 public class MemoryCard {
     private double capacity;
-    private List<PhoneFile> files;
+    private double freeSpace;
+    private List<PhoneFile> phoneFiles;
+
     public MemoryCard(double capacity) {
         this.capacity = capacity;
-        this.files = new ArrayList<>();
+        this.phoneFiles = new ArrayList<>();
     }
 
-    public void save(){
-            this.capacity = this.capacity;
+    public void saveFile(PhoneFile phoneFile) {
+        this.phoneFiles.add(phoneFile);
+    }
+
+    public void getAllFiles() {
+
+        for (int i = 0; i < phoneFiles.size(); i++) {
+            phoneFiles.get(i).getInfo();
+        }
+    }
+
+    public double getFreeSpace() {
+        freeSpace = capacity;
+        for (int i = 0; i < phoneFiles.size(); i++) {
+            freeSpace -= phoneFiles.get(i).getSize();
+        }
+        return freeSpace;
+    }
+
+    public List<PhoneFile> getPhoneFiles() {
+        return phoneFiles;
+    }
+
+    public void setPhoneFiles(List<PhoneFile> phoneFiles) {
+        this.phoneFiles = phoneFiles;
     }
 
     public double getCapacity() {
         return capacity;
-    }
-
-    public void setCapacity(double capacity) {
-        this.capacity = capacity;
-    }
-
-    public List<PhoneFile> getFiles() {
-        return files;
-    }
-
-    public void setFiles(List<PhoneFile> files) {
-        this.files = files;
     }
 }
